@@ -53,11 +53,12 @@ main .left .review {
   transition: all 0.3s ease;
   
 }
-.review.disabled,
-.review:disabled {
+button.review:disabled {
   opacity: 0.6;
+ 
   cursor: not-allowed;
 }
+
 main .right{
   background-color: #343434;
   padding: 1rem 2rem;

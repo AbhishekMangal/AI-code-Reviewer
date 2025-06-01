@@ -20,7 +20,8 @@ function App() {
     const [review, setReview] = useState(`Let'sReview your code`);
     const reviewCode = async () => {
   try {
-    if (state) {
+    if (state)
+       {
       setState(false);
       const res = await axios.post('http://localhost:5000/api/aiRoutes/getReview', { code });
       setReview(res.data);
@@ -53,9 +54,10 @@ function App() {
               }}
             />
         </div>
-        <button className={`review ${!state? "disabled": ""}`} onClick={reviewCode} disabled={!state}  >
-          Review
-        </button>
+       <button className={`review ${!state ? "disabled" : ""}`} onClick={reviewCode} disabled={!state}>
+  Review
+</button>
+
       </div>
      <button className="right">
       { state?<>
