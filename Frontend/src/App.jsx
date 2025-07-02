@@ -23,7 +23,7 @@ function App() {
     if (state)
        {
       setState(false);
-      const res = await axios.post('http://localhost:5000/api/aiRoutes/getReview', { code });
+      const res = await axios.post('https://ai-code-reviewer-uvs3.onrender.com/api/aiRoutes/getReview', { code });
       setReview(res.data);
     }
   } catch (error) {
